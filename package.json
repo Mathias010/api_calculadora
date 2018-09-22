@@ -1,19 +1,14 @@
 {
-  "name": "api_calculadora",
-  "version": "1.0.0",
-  "description": "api de calculadora para a tia",
-  "main": "index.js",
+  "name": "api-calculadora",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "DEBUG=api-calculadora:* nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mathias010/api_calculadora.git"
-  },
-  "author": "Davi  / Carlos Rodrigues Júnior",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mathias010/api_calculadora/issues"
-  },
-  "homepage": "https://github.com/Mathias010/api_calculadora#readme"
+  "dependencies": {
+    "compression": "^1.7.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0"
+  }
 }
