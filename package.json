@@ -1,7 +1,7 @@
 {
   "name": "api_calculadora",
   "version": "1.0.0",
-  "description": "",
+  "description": "api de calculadora para a tia",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
