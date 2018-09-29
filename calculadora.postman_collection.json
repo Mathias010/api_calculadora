@@ -9,7 +9,13 @@
 			"name": "getUsers",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmxvc3JvZHJpZ3Vlc2p1bmlvckBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkNhcmxvcyBSb3JpZ3VlcyIsIl9pZCI6IjViYWY4ZTAzMGViY2NlMTE3YTc1YTQzMSIsImlhdCI6MTUzODIzMjExNH0.Q6wekWkpKeFH4vmX7vewlhYsAqyj7O52taHELBfNaIY",
+						"disabled": true
+					}
+				],
 				"body": {},
 				"url": "http://localhost:3000/users"
 			},
@@ -40,6 +46,55 @@
 					"raw": "{\n\t\"name\": \"teste\"\n}"
 				},
 				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\": \"Carlos Rorigues\",\n\t\"email\": \"carlosrodriguesjunior@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "sign_in user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "carlosrodriguesjunior@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/users/sign_in"
 			},
 			"response": []
 		},
