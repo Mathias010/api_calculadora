@@ -58,6 +58,7 @@ router.post('/sign_in', (req, res, next) => {
       res.send(user);
     })
     .catch((error) => {
+      console.log(error);
       res.statusCode = 500;
       res.send(error);
     });

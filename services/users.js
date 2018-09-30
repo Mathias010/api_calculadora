@@ -31,7 +31,7 @@ class UserService {
             email: user.email
         });
 
-        if (!userOnDB || !userOnDB.comparePassword(user.password)) {
+        if (!userOnDB || !userOnDB.comparePassword(user.password, userOnDB.hash_password)) {
             throw 'Authentication failed. Invalid user or password.';
         }
 

@@ -29,8 +29,8 @@ let UserSchema = new Schema({
   }
 });
 
-UserSchema.methods.comparePassword = (password) => {
-  return bcrypt.compareSync(password, this.hash_password);
+UserSchema.methods.comparePassword = (password, hash_password) => {
+  return bcrypt.compareSync(password, hash_password);
 };
 
 
