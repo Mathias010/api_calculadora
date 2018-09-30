@@ -6,6 +6,7 @@ const userModel = require('./models/users');
 const extractUserMiddleware = require('./middleware/extractUserFromToken');
 
 const usersRouter = require('./routes/users');
+const calculatorRouter = require('./routes/calculator');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://calculadoraUser:gTQP9Qzo5TPYWkYFAy@ds119343.mlab.com:19343/calculadora');
@@ -20,5 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(extractUserMiddleware.extractUser);
   
 app.use('/users', usersRouter);
+app.use('/calculator', calculatorRouter);
 
 module.exports = app;

@@ -10,4 +10,4 @@ on unix
 npm start
 
 on windows powershell
-npm run 
+npm run start:windows
